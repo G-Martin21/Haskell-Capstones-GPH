@@ -32,6 +32,7 @@ combineEvents e1 e2 = cartCombine combiner e1 e2
 combineProbs :: Probs -> Probs -> Probs
 combineProbs p1 p2 = cartCombine (*) p1 p2
 
+-- monoid
 instance Semigroup PTable where
    (<>) ptable1 (PTable [] []) = ptable1
    (<>) (PTable [] []) ptable2 = ptable2
